@@ -85,7 +85,7 @@ export class InMemoryUsersRepository implements UsersRepository {
       password_hash: data.password_hash,
       crn: data.crn ?? null,
       diet: null,
-      days_in_offensive: 0,
+      days_in_offensive: 99, // teste pra testar essa prr de foguinho
     }
 
     this.items.push(user)

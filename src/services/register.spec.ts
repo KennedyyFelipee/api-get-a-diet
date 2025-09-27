@@ -3,6 +3,7 @@ import { InMemoryUsersRepository } from '@/repositories/in-memory/in-memory-user
 import { RegisterService } from './register'
 import { compare } from 'bcryptjs'
 import { UserAlreadyExistsError } from './errors/user-already-exists-error'
+import { InMemoryDietsRepository } from '@/repositories/in-memory/in-memory-diets-repository'
 
 let usersRepository: InMemoryUsersRepository
 let sut: RegisterService

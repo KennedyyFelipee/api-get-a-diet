@@ -5,6 +5,10 @@ import { DietsRepository } from '../diets-repository'
 export class InMemoryDietsRepository implements DietsRepository {
   private items: Diet[] = []
 
+   async findAll(): Promise<Diet[]> {
+    return this.items
+  }
+
   async getAll(): Promise<Diet[] | null> {
     if (this.items.length > 0) {
       return this.items
