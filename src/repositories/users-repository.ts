@@ -7,6 +7,7 @@ import {
 } from '../@types'
 
 export interface UsersRepository {
+  updatePassword(id: string, newPasswordHash: string): unknown
   findById(id: string): Promise<User | null>
   findByEmail(email: string): Promise<User | null>
   checkDaysInOffensive(): Promise<void>

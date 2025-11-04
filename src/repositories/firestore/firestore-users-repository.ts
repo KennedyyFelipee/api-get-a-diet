@@ -129,4 +129,10 @@ export class FirestoreUsersRepository implements UsersRepository {
 
     return user
   }
+
+  //funcion para atualizar a senha do usuário
+  
+  async updatePassword(id: string, newPasswordHash: string): Promise<void> {
+    await updateDoc(doc(firestore.users, id), { password_hash: newPasswordHash })
+  }
 }
